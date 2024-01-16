@@ -1,4 +1,3 @@
-import { cssBundleHref } from "@remix-run/css-bundle";
 
 import {
   Links,
@@ -10,11 +9,14 @@ import {
 } from "@remix-run/react";
 import navbarStyles from "../styles/navbar.css";
 import Navbar from "../components/navbar";
+import tailwindStylesheetUrl from "./styles/tailwind.css";
+
 
 
 export const links = () => [
-  ...(cssBundleHref ? [{ rel: "stylesheet", href: cssBundleHref }] : []),
   { rel: "stylesheet", href: navbarStyles },
+  { rel: "stylesheet", href: tailwindStylesheetUrl },
+
 ];
 
 export default function App() {

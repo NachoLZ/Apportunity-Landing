@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { Link } from '@remix-run/react'; // Importar Link de @remix-run/react
-import navbarStyles from "../styles/navbar.css";
+import navbarStyles from '../styles/navbar.css'; // Asumiendo que tienes estilos en este archivo
 
 export const links = () => [
-  ...(cssBundleHref ? [{ rel: "stylesheet", href: cssBundleHref }] : []),
-  { rel: "stylesheet", href: navbarStyles },
+  ...(cssBundleHref ? [{ rel: 'stylesheet', href: cssBundleHref }] : []),
+  { rel: 'stylesheet', href: navbarStyles },
 ];
 
 export default function Navbar() {
@@ -15,24 +15,28 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="navbar">
-      <div className="logo">
-        <Link to="/">Logo</Link>
+    <section className="elementor-section elementor-top-section elementor-element elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-sticky elementor-sticky--effects elementor-sticky--active" style={{ position: 'fixed', width: '100%', marginTop: 0, marginBottom: 0, top: '50px' }}>
+      <div className="elementor-container elementor-column-gap-default">
+        <div className="elementor-column elementor-col-20 elementor-top-column">
+          <div className="elementor-widget-wrap">
+            <div className="elementor-element elementor-widget elementor-widget-theme-site-logo">
+              <div className="elementor-widget-container">
+                <Link to="/">
+                  {/* Asegúrate de que la ruta de la imagen sea accesible en tu proyecto */}
+                  <img
+                    width="2652"
+                    height="795"
+                    alt="METOS de Pessl Instruments logotipo blanco"
+                    src="../public/logo.png"
+                  />
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Aquí puedes agregar más componentes o contenido según sea necesario */}
       </div>
-      <div className="menuIcon" onClick={toggleMenu}>
-        <i className={isOpen ? 'fas fa-times' : 'fas fa-bars'}></i>
-      </div>
-      <ul className={`${"menu"} ${isOpen ? "showMenu" : ''}`}>
-        <li>
-          <Link to="/">Home</Link>
-        </li>
-        <li>
-          <Link to="/about">About</Link>
-        </li>
-        <li>
-          <Link to="/contact">Contact</Link>
-        </li>
-      </ul>
-    </nav>
+    </section>
   );
 };
