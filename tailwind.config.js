@@ -9,7 +9,7 @@ module.exports = {
       fontFamily: {
         'sans': ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
       },
-      colors: {danger: "#FF414C"}
+      colors: {danger: "#FF414C",blue:"#006FEE"}
     },
   },
   darkMode: "class",

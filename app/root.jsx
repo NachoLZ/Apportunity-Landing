@@ -10,7 +10,8 @@ import {
 import navbarStyles from "../styles/navbar.css";
 import Navbar from "../components/navbar";
 import tailwindStylesheetUrl from "./styles/tailwind.css";
-
+import Navibar from "../components/navibar";
+import CustomFooter from "../components/CustomFooter";
 
 
 export const links = () => [
@@ -29,12 +30,14 @@ export default function App() {
         <Links />
       </head>
       <body>
-        <Navbar />
+        <Navibar />
+        <CustomFooter/>
         <Outlet />
         <ScrollRestoration />
         <Scripts />
         <LiveReload />
       </body>
+      
     </html>
   );
 }
