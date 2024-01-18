@@ -11,7 +11,7 @@ export default function CustomFooter() {
   };
 
   return (
-    <footer style={footerStyle}>
+    <footer className="hidden sm:flex gap-4" style={footerStyle}>
       <div>
         <p>&#9742; Contacto:+5699999999</p>
       </div>

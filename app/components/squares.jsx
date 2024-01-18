@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 export default function Squares() {
   const [hoverState, setHoverState] = useState(Array(8).fill(false)); // Suponiendo 8 tarjetas
@@ -34,8 +34,6 @@ export default function Squares() {
       backText:
         "Apportunity Reporte (BRC) Diseño (Trampas y Material Educativo) Servicio (Sellado Estructural, Limpieza Focalizada y Capacitación Certificada)",
     },
-    // Repite para las otras tarjetas
-    // ...
   ];
 
   return (
