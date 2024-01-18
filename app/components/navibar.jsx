@@ -46,7 +46,7 @@ export default function Navibar() {
     user: <TagUser className="text-danger" fill="currentColor" size={30} />,
   };
   return (
-    <Navbar isBordered style={{ backgroundColor: "#45D483" }}>
+    <Navbar isBordered style={{ backgroundColor: "#0A2239" }}>
       <NavbarContent>
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
@@ -68,6 +68,7 @@ export default function Navibar() {
                 endContent={icons.chevron}
                 radius="sm"
                 variant="light"
+                style={{ color: "#F7EBEC" }}
               >
                 Hardware
               </Button>
@@ -99,6 +100,7 @@ export default function Navibar() {
                 endContent={icons.chevron}
                 radius="sm"
                 variant="light"
+                style={{ color: "#F7EBEC" }}
               >
                 Software
               </Button>
@@ -130,6 +132,7 @@ export default function Navibar() {
                 endContent={icons.chevron}
                 radius="sm"
                 variant="light"
+                style={{ color: "#F7EBEC" }}
               >
                 Soluciones
               </Button>
@@ -176,6 +179,7 @@ export default function Navibar() {
             className="p-0 bg-transparent data-[hover=true]:bg-transparent"
             radius="sm"
             variant="light"
+            style={{ color: "#F7EBEC" }}
           >
             Contacto
           </Button>

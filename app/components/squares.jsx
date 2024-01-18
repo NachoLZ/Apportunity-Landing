@@ -1,3 +1,4 @@
+import { Button } from "@nextui-org/react";
 import { useState } from "react";
 
 export default function Squares() {
@@ -15,6 +16,7 @@ export default function Squares() {
       title: "Hardware",
       description: "Lorem ipsum",
       imageUrl: "https://unsplash.it/500/500/",
+      url: "/hardware",
       backText:
         "Dispositivos inteligentes de monitoreo a distancia; insectos rastreros; voladores y roedores.",
     },
@@ -23,6 +25,7 @@ export default function Squares() {
       title: "Software",
       description: "Lorem ipsum",
       imageUrl: "https://unsplash.it/500/500/",
+      url: "/software",
       backText:
         "Análisis de datos e identificación de especies, reportes digitales y mapas de calor.",
     },
@@ -30,9 +33,16 @@ export default function Squares() {
     {
       title: "Soluciones",
       description: "Lorem ipsum",
+      url: "/soluciones",
       imageUrl: "https://unsplash.it/500/500/",
-      backText:
-        "Apportunity Reporte (BRC) Diseño (Trampas y Material Educativo) Servicio (Sellado Estructural, Limpieza Focalizada y Capacitación Certificada)",
+      backText: (
+        <text className="font-size16">
+          Apportunity Reporte (BRC)
+          <br /> Diseño (Trampas y Material Educativo)
+          <br /> Servicio (Sellado Estructural, Limpieza Focalizada y
+          Capacitación Certificada)
+        </text>
+      ),
     },
   ];
 
@@ -45,22 +55,32 @@ export default function Squares() {
             className={`col ${hoverState[index] ? "hover" : ""}`}
             onTouchStart={() => toggleHover(index)}
           >
-            <div className="container">
-              <div
-                className="front"
-                style={{ backgroundImage: `url(${card.imageUrl})` }}
-              >
-                <div className="inner">
-                  <p>{card.title}</p>
-                  <span>{card.description}</span>
+            <a href={card.url}>
+              <div className="container">
+                <div
+                  className="front"
+                  style={{ backgroundImage: `url(${card.imageUrl})` }}
+                >
+                  <div className="inner">
+                    <p>{card.title}</p>
+                    <span>{card.description}</span>
+                  </div>
+                </div>
+                <div className="back">
+                  <div className="inner back-text ">
+                    <p>{card.backText}</p>
+                  </div>
+                  <Button
+                    color="default"
+                    className="mb-4 button"
+                    variant="ghost"
+                    style={{ color: `rgb(255, 255, 255)` }}
+                  >
+                    Saber más
+                  </Button>
                 </div>
               </div>
-              <div className="back">
-                <div className="inner">
-                  <p>{card.backText}</p>
-                </div>
-              </div>
-            </div>
+            </a>
           </div>
         ))}
       </div>
