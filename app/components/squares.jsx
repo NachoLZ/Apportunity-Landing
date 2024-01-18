@@ -12,7 +12,19 @@ export default function Squares() {
   const cards = [
     // Puedes llenar este arreglo con los datos de cada tarjeta
     {
-      title: "Diligord",
+      title: "Hardware",
+      description: "Lorem ipsum",
+      imageUrl: "https://unsplash.it/500/500/",
+      backText:
+        "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae suscipit c.",
+    }, {
+      title: "Software",
+      description: "Lorem ipsum",
+      imageUrl: "https://unsplash.it/500/500/",
+      backText:
+        "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae suscipit c.",
+    },{
+      title: "Soluciones",
       description: "Lorem ipsum",
       imageUrl: "https://unsplash.it/500/500/",
       backText:

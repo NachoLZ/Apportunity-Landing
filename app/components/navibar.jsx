@@ -1,3 +1,4 @@
+import React from "react";
 import {
   Navbar,
   NavbarBrand,
@@ -9,6 +10,9 @@ import {
   DropdownTrigger,
   Dropdown,
   DropdownMenu,
+  NavbarMenuToggle,
+  NavbarMenuItem,
+  NavbarMenu
 } from "@nextui-org/react";
 import { AcmeLogo } from "./AcmeLogo.jsx";
 import {
@@ -20,7 +24,16 @@ import {
   TagUser,
   Scale,
 } from "./Icons.jsx";
+
 export default function Navibar() {
+  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+  const menuItems = [
+    "Inicio",
+    "Hardware",
+    "Software",
+    "Soluciones",
+    "Contacto"
+  ];
   const icons = {
     chevron: <ChevronDown fill="currentColor" size={16} />,
     scale: <Scale className="text-warning" fill="currentColor" size={30} />,
@@ -34,23 +47,17 @@ export default function Navibar() {
   };
   return (
     <Navbar isBordered style={{ backgroundColor: "#45D483" }}>
-      <NavbarBrand>
-        <AcmeLogo />
-        <p justify="left" className="font-bold text-inherit">
-          ITS: Intel Traps Solutions
-        </p>
-      </NavbarBrand>
-      <NavbarContent justify="center">
-        <NavbarItem>
-          <Button
-            disableRipple
-            className="p-0 bg-transparent data-[hover=true]:bg-transparent"
-            radius="sm"
-            variant="light"
-          >
-            Contacto
-          </Button>
-        </NavbarItem>
+     <NavbarContent>
+        <NavbarMenuToggle
+          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+          className="sm:hidden"
+        />
+        <NavbarBrand>
+          <AcmeLogo />
+          <p className="font-bold text-inherit">ITS: Intel traps solutions</p>
+        </NavbarBrand>
+      </NavbarContent>
+      <NavbarContent className="hidden sm:flex gap-4" justify="center">
         <Dropdown>
           <NavbarItem>
             <DropdownTrigger>
@@ -155,7 +162,33 @@ export default function Navibar() {
             </DropdownItem>
           </DropdownMenu>
         </Dropdown>
+        <NavbarItem>
+          <Button
+            disableRipple
+            className="p-0 bg-transparent data-[hover=true]:bg-transparent"
+            radius="sm"
+            variant="light"
+          >
+            Contacto
+          </Button>
+        </NavbarItem>
       </NavbarContent>
+      <NavbarMenu>
+        {menuItems.map((item, index) => (
+          <NavbarMenuItem key={`${item}-${index}`}>
+            <Link
+              color={
+                index === 0 ? "primary" : index === menuItems.length - 1 ? "foreground" : "foreground"
+              }
+              className="w-full"
+              href="#"
+              size="lg"
+            >
+              {item}
+            </Link>
+          </NavbarMenuItem>
+        ))}
+      </NavbarMenu>
     </Navbar>
   );
 }
