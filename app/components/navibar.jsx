@@ -20,6 +20,7 @@ import {
   TagUser,
   Scale,
 } from "./Icons.jsx";
+import { redirect } from "react-router";
 export default function Navibar() {
   const icons = {
     chevron: <ChevronDown fill="currentColor" size={16} />,
@@ -35,22 +36,11 @@ export default function Navibar() {
   return (
     <Navbar isBordered style={{ backgroundColor: "#45D483" }}>
       <NavbarBrand>
-        <AcmeLogo />
-        <p justify="left" className="font-bold text-inherit">
-          ITS: Intel Traps Solutions
-        </p>
+        <a href="/">
+          <AcmeLogo />
+        </a>
       </NavbarBrand>
       <NavbarContent justify="center">
-        <NavbarItem>
-          <Button
-            disableRipple
-            className="p-0 bg-transparent data-[hover=true]:bg-transparent"
-            radius="sm"
-            variant="light"
-          >
-            Contacto
-          </Button>
-        </NavbarItem>
         <Dropdown>
           <NavbarItem>
             <DropdownTrigger>
@@ -77,7 +67,7 @@ export default function Navibar() {
               description="Dispositivos inteligentes de monitoreo a distancia"
               startContent={icons.scale}
             >
-              Dispositivos inteligentes
+              <a href="/hardware/dispositivos">Dispositivos inteligentes</a>
             </DropdownItem>
           </DropdownMenu>
         </Dropdown>
@@ -107,7 +97,7 @@ export default function Navibar() {
               description="Centro de analisis de datos y tendencias de plagas"
               startContent={icons.user}
             >
-              Central MIP
+              <a href="/software/central-mip">Central MIP</a>
             </DropdownItem>
           </DropdownMenu>
         </Dropdown>
@@ -137,24 +127,40 @@ export default function Navibar() {
               description="Aplicación dedicada a la prevencion de plagas"
               startContent={icons.server}
             >
-              Apportunity
+              <a href="/soluciones/apportunity">Apportunity</a>
             </DropdownItem>
             <DropdownItem
               key="diseño"
               description="Diseño de trampas y material educativo"
               startContent={icons.server}
             >
-              Diseño trampas y material educativo
+              <a href="/soluciones/educacion">
+                {" "}
+                Diseño de trampas y material educativo
+              </a>
             </DropdownItem>
+
             <DropdownItem
               key="servicios"
               description="Servicios de sellado estructural, limpieza focalizada y capacitación"
               startContent={icons.user}
             >
-              Servicios
+              <a href="/soluciones/servicios">Servicios</a>
             </DropdownItem>
           </DropdownMenu>
         </Dropdown>
+        <NavbarItem>
+          <Link href="/contacto">
+            <Button
+              disableRipple
+              className="p-0 bg-transparent data-[hover=true]:bg-transparent"
+              radius="sm"
+              variant="light"
+            >
+              Contacto
+            </Button>
+          </Link>
+        </NavbarItem>
       </NavbarContent>
     </Navbar>
   );

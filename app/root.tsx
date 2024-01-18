@@ -12,12 +12,14 @@ import {
 import Navibar from "~/components/navibar";
 import CustomFooter from "~/components/CustomFooter";
 import stylesheet from "~/styles/tailwind.css";
+import mainCSS from "~/styles/main.css";
 import squaresCSS from "~/styles/squares.css";
 
 export const links: LinksFunction = () => [
   ...(cssBundleHref ? [{ rel: "stylesheet", href: cssBundleHref }] : []),
   { rel: "stylesheet", href: stylesheet },
   { rel: "stylesheet", href: squaresCSS },
+  { rel: "stylesheet", href: mainCSS },
 ];
 
 export default function App() {

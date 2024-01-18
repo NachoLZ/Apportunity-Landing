@@ -12,11 +12,27 @@ export default function Squares() {
   const cards = [
     // Puedes llenar este arreglo con los datos de cada tarjeta
     {
-      title: "Diligord",
+      title: "Hardware",
       description: "Lorem ipsum",
       imageUrl: "https://unsplash.it/500/500/",
       backText:
-        "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae suscipit c.",
+        "Dispositivos inteligentes de monitoreo a distancia; insectos rastreros; voladores y roedores.",
+    },
+
+    {
+      title: "Software",
+      description: "Lorem ipsum",
+      imageUrl: "https://unsplash.it/500/500/",
+      backText:
+        "Análisis de datos e identificación de especies, reportes digitales y mapas de calor.",
+    },
+
+    {
+      title: "Soluciones",
+      description: "Lorem ipsum",
+      imageUrl: "https://unsplash.it/500/500/",
+      backText:
+        "Apportunity Reporte (BRC) Diseño (Trampas y Material Educativo) Servicio (Sellado Estructural, Limpieza Focalizada y Capacitación Certificada)",
     },
     // Repite para las otras tarjetas
     // ...
@@ -24,7 +40,6 @@ export default function Squares() {
 
   return (
     <div className="wrapper">
-      <h1>Parallax Flipping Cards</h1>
       <div className="cols">
         {cards.map((card, index) => (
           <div
