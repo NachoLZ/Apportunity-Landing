@@ -164,7 +164,6 @@ export default function Navibar() {
               key="servicios"
               description="Servicios de sellado estructural, limpieza focalizada y capacitación"
               startContent={icons.user}
-              a
               href="/soluciones/servicios"
             >
               Servicios

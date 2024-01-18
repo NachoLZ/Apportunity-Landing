@@ -1,3 +1,3 @@
 export default function Educacion() {
-  return <div></div>;
+  return <div> Diseño trampas y material educativo</div>;
 }
