@@ -84,8 +84,9 @@ export default function Navibar() {
               key="Dispositivos Inteligentes"
               description="Dispositivos inteligentes de monitoreo a distancia"
               startContent={icons.scale}
+              href="/hardware/dispositivos"
             >
-              <a href="/hardware/dispositivos">Dispositivos inteligentes</a>
+              Dispositivos inteligentes
             </DropdownItem>
           </DropdownMenu>
         </Dropdown>
@@ -114,8 +115,9 @@ export default function Navibar() {
               key="MIP"
               description="Centro de analisis de datos y tendencias de plagas"
               startContent={icons.user}
+              href="/software/central-mip"
             >
-              <a href="/software/central-mip">Central MIP</a>
+              Central MIP
             </DropdownItem>
           </DropdownMenu>
         </Dropdown>
@@ -144,26 +146,28 @@ export default function Navibar() {
               key="Apportunity"
               description="Aplicación dedicada a la prevencion de plagas"
               startContent={icons.server}
+              href="/soluciones/apportunity"
             >
-              <a href="/soluciones/apportunity">Apportunity</a>
+              Apportunity
             </DropdownItem>
             <DropdownItem
               key="diseño"
               description="Diseño de trampas y material educativo"
               startContent={icons.server}
+              href="/soluciones/educacion"
             >
-              <a href="/soluciones/educacion">
-                {" "}
-                Diseño de trampas y material educativo
-              </a>
+              {" "}
+              Diseño de trampas y material educativo
             </DropdownItem>
 
             <DropdownItem
               key="servicios"
               description="Servicios de sellado estructural, limpieza focalizada y capacitación"
               startContent={icons.user}
+              a
+              href="/soluciones/servicios"
             >
-              <a href="/soluciones/servicios">Servicios</a>
+              Servicios
             </DropdownItem>
           </DropdownMenu>
         </Dropdown>

@@ -1,3 +1,3 @@
 export default function CentralMIP() {
-  return <div></div>;
+  return <div>Central MIP</div>;
 }
