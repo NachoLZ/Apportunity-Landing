@@ -70,7 +70,7 @@ export default function Navibar() {
                 variant="light"
                 style={{ color: "#F7EBEC" }}
               >
-                Hardware
+                Dispositivos Inteligentes
               </Button>
             </DropdownTrigger>
           </NavbarItem>
@@ -102,7 +102,7 @@ export default function Navibar() {
                 variant="light"
                 style={{ color: "#F7EBEC" }}
               >
-                Software
+                Desarrollos Tecnológicos
               </Button>
             </DropdownTrigger>
           </NavbarItem>
@@ -134,7 +134,7 @@ export default function Navibar() {
                 variant="light"
                 style={{ color: "#F7EBEC" }}
               >
-                Soluciones
+                Servicios
               </Button>
             </DropdownTrigger>
           </NavbarItem>

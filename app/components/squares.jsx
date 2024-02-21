@@ -13,35 +13,30 @@ export default function Squares() {
   const cards = [
     // Puedes llenar este arreglo con los datos de cada tarjeta
     {
-      title: "Hardware",
-      description: "Lorem ipsum",
+      title: "Dispositivos Inteligentes",
+      description: "",
       imageUrl: "https://unsplash.it/500/500/",
       url: "/hardware",
       backText:
-        "Dispositivos inteligentes de monitoreo a distancia; insectos rastreros; voladores y roedores.",
+        "Dispositivos inteligentes ayudan a mantenernos informados en forma permanente acerca de nuestros puntos de monitoreo.",
     },
 
     {
-      title: "Software",
-      description: "Lorem ipsum",
+      title: "Desarrollos Tecnológicos",
+      description: "",
       imageUrl: "https://unsplash.it/500/500/",
       url: "/software",
       backText:
-        "Análisis de datos e identificación de especies, reportes digitales y mapas de calor.",
+        "Tecnologías y productos amigables con el medio ambiente, incluida la creación de aplicaciones para mejorar y optimizar los servicios.",
     },
 
     {
-      title: "Soluciones",
-      description: "Lorem ipsum",
+      title: "Servicios",
+      description: "",
       url: "/soluciones",
       imageUrl: "https://unsplash.it/500/500/",
       backText: (
-        <text className="font-size16">
-          Apportunity Reporte (BRC)
-          <br /> Diseño (Trampas y Material Educativo)
-          <br /> Servicio (Sellado Estructural, Limpieza Focalizada y
-          Capacitación Certificada)
-        </text>
+        "Servicios certificados para subsanar las desviaciones encontradas y servicios de consultoria calificada."
       ),
     },
   ];
